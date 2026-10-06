@@ -1,0 +1,122 @@
+/* Nicolas Personal Calendar — estilo compartido del sitio informacional.
+   Sitio estático: sin JavaScript, sin analítica, sin recursos externos. */
+
+:root {
+  --ink: #1c2733;
+  --muted: #5b6b7a;
+  --accent: #2a5d8f;
+  --line: #d9e0e7;
+  --bg: #ffffff;
+  --soft: #f4f7fa;
+}
+
+* { box-sizing: border-box; }
+
+body {
+  margin: 0;
+  font-family: system-ui, -apple-system, "Segoe UI", Roboto, Arial, sans-serif;
+  color: var(--ink);
+  background: var(--bg);
+  line-height: 1.6;
+}
+
+.wrap {
+  max-width: 760px;
+  margin: 0 auto;
+  padding: 0 1.25rem;
+}
+
+header.site {
+  border-bottom: 1px solid var(--line);
+  background: var(--soft);
+}
+
+header.site .wrap {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem 1.5rem;
+  align-items: baseline;
+  justify-content: space-between;
+  padding-top: 0.9rem;
+  padding-bottom: 0.9rem;
+}
+
+.brand {
+  font-weight: 700;
+  letter-spacing: 0.01em;
+}
+
+nav a {
+  margin-left: 1rem;
+  color: var(--accent);
+  text-decoration: none;
+}
+
+nav a:hover,
+nav a:focus {
+  text-decoration: underline;
+}
+
+main.wrap {
+  padding-top: 2rem;
+  padding-bottom: 3rem;
+}
+
+h1 {
+  font-size: 1.6rem;
+  margin: 0 0 1rem;
+}
+
+h2 {
+  font-size: 1.15rem;
+  margin: 2rem 0 0.6rem;
+  color: var(--accent);
+}
+
+ul, ol {
+  padding-left: 1.4rem;
+}
+
+li {
+  margin: 0.3rem 0;
+}
+
+li ul, li ol {
+  margin: 0.3rem 0;
+}
+
+code {
+  font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+  font-size: 0.85em;
+  background: var(--soft);
+  border: 1px solid var(--line);
+  border-radius: 4px;
+  padding: 0.1em 0.35em;
+  word-break: break-all;
+}
+
+.note {
+  border-left: 3px solid var(--accent);
+  background: var(--soft);
+  padding: 0.75rem 1rem;
+  border-radius: 0 6px 6px 0;
+}
+
+a {
+  color: var(--accent);
+}
+
+footer.site {
+  border-top: 1px solid var(--line);
+  color: var(--muted);
+  font-size: 0.9rem;
+}
+
+footer.site .wrap {
+  padding-top: 1rem;
+  padding-bottom: 1.5rem;
+}
+
+footer.site p {
+  margin: 0;
+}
