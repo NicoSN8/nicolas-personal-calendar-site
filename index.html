@@ -1,0 +1,68 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Nicolas Personal Calendar</title>
+  <meta name="description" content="Sitio informacional de la aplicación personal Nicolas Personal Calendar: consulta de solo lectura del propio calendario de Google mediante la API oficial.">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header class="site">
+  <div class="wrap">
+    <span class="brand">Nicolas Personal Calendar</span>
+    <nav aria-label="Principal">
+      <a href="index.html" aria-current="page">Inicio</a>
+      <a href="privacy.html">Privacidad</a>
+      <a href="terms.html">Términos</a>
+    </nav>
+  </div>
+</header>
+<main class="wrap">
+  <h1>Nicolas Personal Calendar</h1>
+  <p>Aplicación de <strong>uso personal</strong> de Nicolas Su Nobrega para consultar <strong>su propio</strong> calendario de Google Calendar de forma <strong>exclusivamente de lectura</strong>, mediante la API oficial de Google Calendar (v3) y OAuth&nbsp;2.0.</p>
+
+  <p class="note">Este sitio es solo documentación de la aplicación: no es la aplicación en sí y no accede a ningún dato. No añade formularios, analítica propia ni anuncios; el alojamiento (GitHub Pages) registra por seguridad la dirección IP de las visitas, como documenta GitHub (ver <a href="privacy.html">Privacidad</a>).</p>
+
+  <h2>Qué hace</h2>
+  <ul>
+    <li>Cuando Nicolas lo solicita (por ejemplo, «organízame el día»), consulta la <strong>lista de calendarios</strong> de su cuenta de Google.</li>
+    <li>Consulta los <strong>eventos</strong> del calendario principal de la cuenta, dentro de una <strong>ventana de fechas concreta</strong> (por defecto, hoy y los próximos 7&nbsp;días); otros calendarios solo si Nicolas los pide expresamente.</li>
+    <li>La información consultada se usa en su sesión de trabajo personal para organizar el día y los próximos compromisos.</li>
+  </ul>
+
+  <h2>Permisos exactos solicitados</h2>
+  <ul>
+    <li><code>https://www.googleapis.com/auth/calendar.calendarlist.readonly</code> — ver la lista de calendarios de la cuenta.</li>
+    <li><code>https://www.googleapis.com/auth/calendar.events.readonly</code> — ver los eventos de esos calendarios.</li>
+  </ul>
+  <p>Solo esos dos permisos de lectura. Nada más.</p>
+
+  <h2>Qué no hace</h2>
+  <ul>
+    <li>No crea, modifica ni elimina eventos; no responde invitaciones.</li>
+    <li>No lee correo electrónico, archivos, fotos ni contactos.</li>
+    <li>No vende datos ni los usa con fines publicitarios. La información consultada se procesa en la sesión de <strong>Factory</strong> que Nicolas usa (ver <a href="privacy.html">Privacidad</a>).</li>
+    <li>No añade analítica ni cookies propias: sin formularios, sin estadísticas y sin anuncios. El alojamiento (GitHub Pages) registra la IP de las visitas con fines de seguridad, según su documentación.</li>
+  </ul>
+
+  <h2>Cómo funciona</h2>
+  <ul>
+    <li>La autorización se otorga con OAuth&nbsp;2.0 (flujo de aplicación de escritorio, con PKCE y redirección a <code>127.0.0.1</code>); Nicolas la completa desde su propio navegador.</li>
+    <li>El lector es código local que se ejecuta en el PC de Nicolas. Las credenciales se guardan solo en ese PC, en <code>~/.config/nicolas-calendar</code>, con permisos restringidos; nunca se suben a este sitio ni a este repositorio público.</li>
+    <li>Nicolas usa la aplicación a través de <strong>Factory</strong> (un asistente llamado Droid): la información consultada se procesa en esa sesión para organizar su día. El detalle está en la página de <a href="privacy.html">Privacidad</a>.</li>
+  </ul>
+
+  <h2>Revocar el acceso</h2>
+  <p>El acceso se puede revocar en cualquier momento desde la cuenta de Google; borrar la copia local del token es una acción distinta (no revoca). Los pasos exactos están en <a href="privacy.html">Privacidad</a>.</p>
+
+  <h2>Responsable y contacto</h2>
+  <p>Nicolas Su Nobrega · <a href="mailto:nicolassunobrega2@gmail.com">nicolassunobrega2@gmail.com</a></p>
+</main>
+<footer class="site">
+  <div class="wrap">
+    <p>Sitio informacional de la aplicación personal «Nicolas Personal Calendar». <a href="privacy.html">Privacidad</a> · <a href="terms.html">Términos</a> · Contacto: <a href="mailto:nicolassunobrega2@gmail.com">nicolassunobrega2@gmail.com</a></p>
+  </div>
+</footer>
+</body>
+</html>
